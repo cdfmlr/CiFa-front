@@ -44,6 +44,12 @@
           <div v-else-if="navSelected[0]==='about'">
             <about-page/>
           </div>
+          <div v-else-if="navSelected[0]==='sortalgo'">
+            <sortalgo-page/>
+          </div>
+          <div v-else-if="navSelected[0]==='strsearch'">
+            <strsearch-page/>
+          </div>
           <div v-else>
             Not Yet Implemented.
           </div>
@@ -59,12 +65,14 @@
 <script>
     import WordFaPage from "./components/WordFaPage";
     import AboutPage from "./components/AboutPage";
+    import SortalgoPage from "./components/SortalgoPage";
+    import StrsearchPage from "./components/StrsearchPage";
     export default {
         name: "App",
-        components: {AboutPage, WordFaPage},
+        components: {StrsearchPage, SortalgoPage, AboutPage, WordFaPage},
         data: function () {
             return {
-                navSelected: ["sortalgo"]
+                navSelected: ["about"]
             };
         },
         methods: {
