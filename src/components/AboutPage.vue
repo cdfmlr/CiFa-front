@@ -3,8 +3,7 @@
     <a-page-header title="CiFa" sub-title="Created By CDFMLR" />
     <!--  <h1>About CiFa</h1>-->
     <div id="readme">
-
-      <p>CiFa 是一个词频统计工具，提供一套 Web API。后端使用 Golang 实现，完成计算密集型任务，并维持 http 服务。前端基于 Vue.js，实现了一套 Ant Design 风格的用户界面。</p>
+      <p><img alt="CiFa" src="../assets/logo.png" style="height: 12%; width: 12%"/> 是一个词频统计工具，提供一套 Web API。后端使用 Golang 实现，完成计算密集型任务，并维持 http 服务。前端基于 Vue.js，实现了一套 Ant Design 风格的用户界面。</p>
       <h2>功能概览</h2>
       <ul>
         <li>
@@ -34,34 +33,34 @@
         </li>
       </ul>
       <h2>开发进度</h2>
-      <ul>
+      <ul style="list-style: none;">
         <li>
           <input type="checkbox" disabled="disabled" checked />
-          <p>排序算法</p>
-        </li>
-        <li>
-          <input type="checkbox" disabled="disabled" checked />
-          <p>字符串搜索算法</p>
+          <span>排序算法</span>
         </li>
         <li>
           <input type="checkbox" disabled="disabled" checked />
-          <p>词频统计实现</p>
+          <span>字符串搜索算法</span>
         </li>
         <li>
           <input type="checkbox" disabled="disabled" checked />
-          <p>服务框架</p>
+          <span>词频统计实现</span>
         </li>
         <li>
           <input type="checkbox" disabled="disabled" checked />
-          <p>词频统计 API、UI</p>
+          <span>服务框架</span>
         </li>
         <li>
-          <input type="checkbox" disabled="disabled" />
-          <p>搜索 API、UI</p>
+          <input type="checkbox" disabled="disabled" checked />
+          <span>词频统计 API、UI</span>
         </li>
         <li>
-          <input type="checkbox" disabled="disabled" />
-          <p>排序 API、UI</p>
+          <input type="checkbox" disabled="disabled" checked />
+          <span>搜索 API、UI</span>
+        </li>
+        <li>
+          <input type="checkbox" disabled="disabled" checked />
+          <span>排序 API、UI</span>
         </li>
       </ul>
       <h2>开放源代码</h2>
