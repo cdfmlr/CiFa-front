@@ -113,11 +113,11 @@
           <a-tag color="blue" v-else-if="isWordfaRunning">
             Running
           </a-tag>
-          <a-tag color="red" v-else-if="isWordfaError || !wordfaResult">
-            Error
-          </a-tag>
           <a-tag color="green" v-else-if="isWordfaResulted">
             Done
+          </a-tag>
+          <a-tag color="red" v-else>
+            Error
           </a-tag>
         </template>
         <template slot="extra">
@@ -261,13 +261,14 @@
             onWordfaFormSubmit() {
                 this.wordfaForm.token = this.getToken();
                 console.log("submit:", this.wordfaForm);
+
                 let thisVue = this;
-                // axios.defaults.headers.post['Content-Type'] = 'Content-Type:application/x-www-form-urlencoded; charset=UTF-8'
-                // // TODO: Production URL
-                // axios.post('http://localhost:9001/api/wordfa', thisVue.wordfaForm)
-                //     .then(function (response) {
-                //         console.log(response)
-                //     })
+
+                if (thisVue.wordfaForm.keywords === '' || thisVue.wordfaForm.file === null) {
+                    this.$message.error("提交被拒绝：请正确填写文件、关键词。");
+                    return
+                }
+
                 const data = new FormData();
 
                 data.append("token", thisVue.getToken());
@@ -288,6 +289,9 @@
                 }).then(function (response) {
                     console.log(response.data);
                     thisVue.justPosted = false;
+                    if (response.data.error) {
+                        thisVue.$message.error('词频统计失败:\n' + response.data.error);
+                    }
                 });
             }
         },
