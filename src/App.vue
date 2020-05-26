@@ -59,7 +59,7 @@
               <a-col :xs="16" :sm="10" :md="8" :lg="8" :xl="8">
                 <!--词频统计-->
                 <div class="nav-card">
-                  <a-card style="width: 200px" hoverable>
+                  <a-card style="width: 200px" hoverable @click="navSelected=['wordfa']">
                     <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gf153ztau3j30zk0nptbs.jpg"
                          slot="cover"
                          height="150px"
@@ -75,7 +75,7 @@
               <a-col :xs="16" :sm="10" :md="8" :lg="8" :xl="8">
                 <!--子串搜索-->
                 <div class="nav-card">
-                  <a-card class="nav-card" style="width: 200px" hoverable>
+                  <a-card class="nav-card" style="width: 200px" hoverable @click="navSelected=['strsearch']">
                     <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gf159evrzqj30hs0dcjsd.jpg"
                          slot="cover"
                          height="150px"
@@ -92,7 +92,7 @@
               <a-col :xs="16" :sm="10" :md="8" :lg="8" :xl="8">
                 <!--排序算法-->
                 <div class="nav-card">
-                  <a-card class="nav-card" style="width: 200px" hoverable>
+                  <a-card class="nav-card" style="width: 200px" hoverable @click="navSelected=['sortalgo']">
                     <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gf15ikgoqvj30d70dcwfd.jpg"
                          slot="cover"
                          height="150px"
