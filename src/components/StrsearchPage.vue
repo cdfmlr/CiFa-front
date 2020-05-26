@@ -57,6 +57,7 @@
 
 <script>
     import axios from "axios";
+    import {baseUrl} from "../config";
 
     export default {
         name: "StrsearchPage",
@@ -77,7 +78,7 @@
                     text: this.text,
                     pattern: this.pattern
                 };
-                axios.post('http://localhost:9001/api/strsearch', JSON.stringify(reqData))
+                axios.post( baseUrl + '/api/strsearch', JSON.stringify(reqData))
                     .then(res => {
                         console.log(res);
                         if (res.data && res.data.error) {

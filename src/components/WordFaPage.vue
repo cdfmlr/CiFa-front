@@ -194,6 +194,7 @@
 
 <script>
     import axios from 'axios'
+    import {baseUrl} from "../config";
 
     export default {
         name: "WordFaPage",
@@ -230,7 +231,7 @@
             fetchWordfaTaskResult() {
                 let thisVue = this;
                 // TODO: Production URL
-                axios.get('http://localhost:9001/api/wordfa', {
+                axios.get(baseUrl + '/api/wordfa', {
                     params: {
                         token: this.getToken()
                     }
@@ -284,7 +285,7 @@
                 axios({
                     method: 'post',
                     headers: {'Content-Type': 'multipart/form-data'},
-                    url: 'http://localhost:9001/api/wordfa',
+                    url:  baseUrl + '/api/wordfa',
                     data: data
                 }).then(function (response) {
                     console.log(response.data);

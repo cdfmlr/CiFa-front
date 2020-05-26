@@ -74,6 +74,7 @@
 
 <script>
     import axios from 'axios'
+    import {baseUrl} from "../config";
 
     export default {
         name: "SortalgoPage",
@@ -117,7 +118,7 @@
                     algorithm: Number(this.algorithm),
                     data: this.data
                 };
-                axios.post('http://localhost:9001/api/sort/float', JSON.stringify(reqData))
+                axios.post(baseUrl + '/api/sort/float', JSON.stringify(reqData))
                     .then(res => {
                         console.log(res);
                         if (res.data && res.data.error) {
